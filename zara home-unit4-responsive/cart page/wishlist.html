@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/e69451082d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/style/wishlist.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../style/footer.css">
+
+    <title>Wish list</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="container">
+        <div id="top">
+        </div>
+        
+        <div id="content">
+            <div id="items">
+            </div>
+
+            
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+    import {navbar,footer} from "../component/navbar.js"
+    document.getElementById("header").innerHTML=navbar()
+    document.getElementById("footer").innerHTML=footer()
+    populateInCartPage();
+    function populateInCartPage(){
+    let cart=JSON.parse(localStorage.getItem("wish_list")) ||[];
+    
+    document.getElementById("items").innerHTML=""
+    cart.map((elem,index,array)=>{
+
+        var image=document.createElement("img");
+        image.src=elem.imagelink1
+
+        var card=document.createElement("div");
+        card.className="card"
+        
+
+        var fav_div=document.createElement("div");
+        fav_div.className="fav-div"
+
+        var fav=document.createElement("fav");
+        fav.className="fab";
+
+        var fab_icon=document.createElement("div");
+        fab_icon.className="material-icons fab-icon";
+        fab_icon.textContent="work";
+        fab_icon.addEventListener("click",()=>{addToCartFromWishlist(elem,index)});
+
+        var cross_icon=document.createElement("div");
+        cross_icon.className="material-icons cross-icon";
+        cross_icon.textContent="close"
+        cross_icon.addEventListener("click",()=>{removeItemsfromWishlist(index)})
+
+        var txt=document.createElement("div");
+        txt.className="txt";
+
+        var name=document.createElement("div");
+        name.id="name";
+        name.textContent=elem.name;
+
+        var price_div=document.createElement("div")
+        price_div.id="price-div";
+
+        var price=document.createElement("div")
+        price.id="price";
+        price.textContent=elem.price;
+
+        var quantity=document.createElement("div")
+        quantity.id="quantity";
+
+        var ref1=document.createElement("div")
+        ref1.id="ref1";
+        ref1.textContent=elem.ref;
+        
+        var ref2=document.createElement("div")
+        ref2.id="ref2";
+
+
+
+
+        fav.append(fab_icon,cross_icon);
+        fav_div.append(fav);
+
+        price_div.append(price,quantity);
+        txt.append(name,price_div,ref1,ref2);
+
+        card.append(image,fav_div,txt);
+
+        document.getElementById("items").append(card);
+        
+    })
+     
+}
+
+function removeItemsfromWishlist(index){
+    let wish=JSON.parse(localStorage.getItem("wish_list")) ||[];
+    wish.splice(index,1);
+    localStorage.setItem("wish_list",JSON.stringify(wish));
+    populateInCartPage();
+}
+
+function addToCartFromWishlist(elem,index){
+    let cart=JSON.parse(localStorage.getItem("basketArray")) ||[];
+    var matched=false;
+    for(let i=0; i<cart.length; i++){
+        if(elem.ref==cart[i].ref){cart[i].qty+=elem.qty; matched=true;}
+    }
+    if(matched==false){cart.push(elem);}
+    localStorage.setItem("basketArray",JSON.stringify(cart));
+    
+}
+</script>

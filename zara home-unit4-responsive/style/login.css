@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+  overflow: hidden;
+}
+body::-webkit-scrollbar {
+  width: 9px;
+}  
+body::-webkit-scrollbar-thumb {
+    background: rgb(26, 26, 26); 
+    /* border-radius: 10px; */
+    border: 2px solid white;
+  }
+body::-webkit-scrollbar-thumb:hover {
+    background: rgb(26, 26, 26);
+  }
+#logdiv {
+  /* border: 3px solid blue; */
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://static.zarahome.net/8/static4/itxwebstandard/dto_imagen/lookbooks/dist/desktop/ss22.jpg?20220225022027&imwidth=1536&impolicy=zarahome-itxmedium");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 15%;
+}
+#login_container {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 63%;
+  margin: auto;
+  /* border: 3px solid black; */
+  margin-top: -53%;
+}
+
+#log-left {
+  flex: 1;
+  margin: 30px;
+}
+
+#log-right {
+  flex: 1;
+  margin: 30px;
+}
+
+#log-left > .input-group {
+  top: 180px;
+  position: absolute;
+  width: 30%;
+  transition: 0.5s;
+}
+
+#log-left > p {
+  font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  color: #1e1e1e;
+  line-height: 1.35em;
+  letter-spacing: 0em;
+  margin: 4px;
+  margin-left: 0;
+}
+
+#log-left > h6,
+#log-right > h6 {
+  font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  color: #1e1e1e;
+  line-height: 1.35em;
+  letter-spacing: 0em;
+  margin-bottom: 10px;
+  padding: 10px 10px 10px 0;
+}
+
+.input-group > p {
+  width: 100%;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #1e1e1e;
+}
+
+.input-field {
+  width: 80%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: 0;
+  border-bottom: 1px solid #999;
+  border-left: 0;
+  border-right: 0;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.input-group > .submit-btn {
+  display: block;
+  width: 80%;
+  outline: none;
+  border: 1px solid black;
+  background-color: white;
+  padding: 10px 30px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35em;
+  letter-spacing: 0em;
+  color: black;
+}
+
+#Login:hover,
+#create_account:hover {
+  background-color: black;
+  color: white;
+}
+#user-details{
+  display: none;
+}
+/* #login_text{
+  display: none;
+}
+#login-icon{
+  display: none;
+} */
+#create_account {
+  display: block;
+  width: 80%;
+  margin: auto;
+  outline: none;
+  border: 1px solid black;
+  background-color: white;
+  margin-left: 0px;
+  padding: 10px 30px;
+  font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  color: #1e1e1e;
+  line-height: 1.35em;
+  letter-spacing: 0em;
+}
+
+.line_div {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.lines {
+  width: 100%;
+  height: 45px;
+  position: relative;
+}
+
+.lines::after,
+.lines::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  height: 1px;
+  background-color: #1e1e1e;
+  width: 39%;
+  top: 45%;
+}
+
+.lines::after {
+  left: 0;
+}
+
+.lines::before {
+  right: 0;
+}
+
+.orwith {
+  height: 100%;
+  width: 22%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orwith > p {
+  margin-top: 15%;
+  font-size: 14px;
+  font-weight: 500;
+}
+img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -3px auto 0px auto;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Img {
+  width: 80%;
+  text-align: center;
+}
+.Img > p {
+  font-size: 12px;
+  margin-top: 2px;
+  line-height: 14px;
+}
+span > a {
+  color: black;
+}
+@media only screen and (min-width: 415px) and (max-width: 617px) {
+  #login_container {
+  width: 100%;
+  margin-top: -150%;
+    display: flex;
+  flex-direction: column;
+}
+}
+@media only screen and (min-width: 618px) and (max-width: 768px) {
+  #login_container {
+  width: 80%;
+  margin-top: -91%;
+  
+} 
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #login_container {
+  width: 70%;
+  margin-top: -69%;
+  /* border: 3px solid black; */
+}
+}

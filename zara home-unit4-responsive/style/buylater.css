@@ -1,0 +1,323 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: ZH-Sans,Arial,'Lucida Sans Unicode',sans-serif;
+}
+body::-webkit-scrollbar {
+    width: 9px;
+}  
+body::-webkit-scrollbar-thumb {
+    /* border-radius: 10px; */
+    background: rgb(26, 26, 26); 
+    border: 2px solid white;
+    }
+body::-webkit-scrollbar-thumb:hover {
+    background: rgb(26, 26, 26);
+    }
+#header{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+#container{
+    /* border:3px solid red;  */
+    border-bottom: 1px solid rgb(185, 185, 185);
+    padding: 100px 30px;
+    margin:auto;
+    margin-bottom: 50px;
+   
+}
+#top{
+    /* border:3px solid blue; */
+    border-bottom: 1px solid rgb(237, 237, 237);
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+}
+#SHOPPING-BASKET{
+    /* border-bottom: 3px solid rgb(0, 0, 0); */
+    flex: 10;
+    text-align: center;
+    height: 30px;
+    font-size: 87%;
+    font-weight: 600;
+   
+}
+#BUY-LATER{
+    /* border:5px solid blue; */
+    flex: 10;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    height: 30px;
+    font-size: 87%;
+    font-weight: 600;
+}
+#content{
+    /* border: 1px solid blue; */
+    display: flex;
+    padding: 30px 70px 0px 90px;
+    margin-bottom: 20px;
+    width:100%;
+}
+#items{
+    /* border: 1px solid green; */
+    /* flex: 45; */
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.card{
+    /* border: 6px solid brown; */
+    height: 670px;
+    margin: 20px 0px;
+    margin-right: 20px;
+}
+.card:hover .fav-div{
+    /* border:1px solid blue; */
+    background-color: white;
+    transition: 0.7s;
+}
+.card:hover .buy-later-btn{
+    transition: 0.7;
+    color: black;
+}
+.card img{
+    width: 100%;
+}
+.fav-div{
+    height: 50px;
+    width: 445px;
+    position: relative;
+    top: -557px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+.buy-later-btn{
+    /* border: 1px solid black; */
+    display: inline-block;
+    margin-right: 270px;
+    font-size: 82%;
+    color: transparent;
+}
+.bag-icon{
+    /* border: 1px solid black; */
+    display: inline-block;
+    margin-right: 10px;
+    color: rgb(85, 85, 85);
+}
+.bag-icon:hover{
+    color: black;
+    font-weight: bolder;
+}
+.cross-icon{
+    /* border: 1px solid black; */
+    display: inline-block;
+    color: rgb(85, 85, 85);
+}
+.cross-icon:hover{
+    color: black;
+    font-weight: bolder;
+}
+
+.txt{
+    position: relative;
+    top: -50px;
+}
+#name{
+    /* border: 1px solid black; */
+    font-size: 95%;
+
+}
+#price-div{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+    font-size: 90%;
+    margin-right: 10px;
+}
+
+#quantity{
+    /* border: 1px solid black; */
+    width: 70px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#minus{
+    /* border: 1px solid black; */
+    font-size: 130%;
+    cursor: pointer;
+}
+#count{
+    border: 1px solid rgb(49, 49, 49);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80%;
+    color: white;
+    background-color: rgb(34, 34, 34);
+}
+#plus{
+    /* border: 1px solid black; */
+    font-size: 130%;
+    cursor: pointer;
+}
+#ref1{
+    /* border: 1px solid black; */
+    margin-top: 13px;
+    font-size: 65%;
+    color: rgb(126, 126, 126);
+}
+#ref2{
+    /* border: 1px solid black; */
+    font-size: 65%;
+    color: rgb(126, 126, 126);
+}
+#total-items{
+    border-bottom: 1px solid gray;
+    font-size: 120%;
+    font-weight: 600;
+    height: 40px;
+    color: rgb(44, 44, 44);
+}
+#total-price-including-tax-div{
+    /* border: 1px solid gray; */
+    display: flex;
+    justify-content: space-between;
+    padding:15px 0px;
+    font-size: 80%;
+    color: rgb(109, 109, 109);
+}
+#total-price-including-tax-title{
+    /* border: 1px solid gray; */
+    height: 20px;
+}
+#total-price-including-tax-data{
+    /* border: 1px solid gray; */
+    text-align: right;
+    height: 20px;
+    font-size: 120%;
+}
+#total-price-div{
+    /* border: 1px solid teal; */
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-top: 5px;
+    color: rgb(44, 44, 44);
+}
+
+#total-price-data{
+    /* border: 1px solid teal; */
+    text-align: right;
+}
+#promo-code{
+    /* border:1px solid black; */
+    margin-top: 50px;
+    font-size: 80%;
+    color: rgb(114, 114, 114);
+}
+#process-order{
+    border: 1px solid rgb(41, 41, 41);
+    text-align: center;
+    padding: 8px;
+    margin-top: 20px;
+    font-size: 72%;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(34, 34, 34);
+}
+#process-order:hover{
+    background-color: rgb(95, 95, 95);
+}
+
+#empty-card{
+    /* border: 5px solid black; */
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    padding-top: 50px;
+    margin-left: 700px;
+    font-size: 120%;
+}
+
+@media only screen and (min-width: 415px) and (max-width: 617px) {
+   
+    #empty-card {
+    /* border: 5px solid black; */
+    width:90%;
+    height: 500px;
+    text-align: center;
+    padding-top: 50px;
+    margin-left: 10px;
+    font-size: 120%;
+    display: flex;
+  }
+  #items {
+      /* border: 5px solid black; */
+    width: 90%;
+    display: flex;
+    align-self: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40%;
+  }
+}
+
+
+@media only screen and (min-width: 618px) and (max-width: 768px) {
+ #empty-card{
+    /* width: 500px; */
+    /* border: 5px solid black; */
+    height: 500px;
+    text-align: center;
+    padding-top: 50px;
+    margin-left: 50px;
+    font-size: 120%;
+    display: flex;
+}
+#items{
+    /* flex: 45; */
+    /* border: 1px solid green; */
+    width: 75%;
+    display: flex;
+    align-self: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+ #empty-card{
+    /* border: 5px solid black; */
+    height: 500px;
+    text-align: center;
+    padding-top: 50px;
+    margin-left: 50px;
+    font-size: 120%;
+    display: flex;
+}
+#items{
+    /* flex: 45; */
+    /* border: 1px solid green; */
+    width: 75%;
+    display: flex;
+    align-self: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+}
