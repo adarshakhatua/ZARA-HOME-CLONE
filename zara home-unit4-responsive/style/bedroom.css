@@ -1,0 +1,129 @@
+#bedcon {
+  /* border: 1px solid black; */
+  width: 100%;
+  color: black;
+  position: fixed;
+  width: 100%;
+}
+#bedcontainer {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 75%;
+  /* padding-top: 140px; */
+  /* border:1px solid rgb(164, 0, 0); */
+}
+body {
+  font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+  color: #515151;
+  font-size: 80%;
+  word-spacing: 2px;
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 9px;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(26, 26, 26);
+  /* border-radius: 10px; */
+  border: 2px solid white;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(26, 26, 26);
+}
+#bedcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 49%);
+  grid-template-rows: repeat(11, 450px);
+  grid-gap: 3%;
+  /* grid-column-gap: 5%; */
+  padding: 9% 2.5% 9%;
+  /* border:1px solid blue; */
+
+}
+button {
+  background-color: transparent;
+  color: transparent;
+  width: 100%;
+  text-align: center;
+  padding: 13px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+button:hover {
+  background-color: black;
+  color: white;
+  border: transparent;
+}
+image {
+  width: 100%;
+}
+#item-name:hover{
+  text-decoration: underline;
+  color: rgb(98, 98, 98);
+}
+
+#buttondiv {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size:cover;
+  /* border:7px solid green; */
+}
+
+#footer {
+  margin-bottom: 5%;
+  border-top:1px solid rgb(212, 212, 212);
+  margin-top: 3%;
+  padding-top: 2%;
+  width: 100%;
+}
+@media only screen and (min-width: 415px) and (max-width: 617px) {
+  #buttondiv {
+    flex-direction: row;
+    height: 220px;
+  }
+  #bedcontainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(19, 310px);
+    grid-gap: 10px;
+  }
+ 
+}
+
+@media only screen and (min-width: 618px) and (max-width: 768px) {
+  #buttondiv {
+    flex-direction: column;
+    height: 220px;
+  }
+  #bedcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 356px);
+    grid-template-rows: repeat(10, 300px);
+    grid-gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 15%;
+    /* border:4px solid red; */
+  }
+ 
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+ 
+  #buttondiv {
+    flex-direction: column;
+    height: 292px;
+  }
+  #bedcontainer {
+    /* width:970px; */
+    display: grid;
+    grid-template-columns: repeat(2, 472px);
+    grid-template-rows: repeat(11, 380px);
+    grid-gap: 20px;
+    margin-top: 10px;
+    margin-bottom: -35%;
+  
+  }
+
+}

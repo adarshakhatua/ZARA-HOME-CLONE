@@ -1,0 +1,132 @@
+body {
+    font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+}
+body::-webkit-scrollbar {
+    width: 9px;
+}  
+body::-webkit-scrollbar-thumb {
+    background: rgb(26, 26, 26); 
+    /* border-radius: 10px; */
+    border: 2px solid white;
+    }
+body::-webkit-scrollbar-thumb:hover {
+    background: rgb(26, 26, 26);
+    }
+
+#guestnav{
+     border: 1px solid transparent;
+  height: 100px;
+  color: black;
+  background:white;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+
+}
+#guest_div {
+    width: 100%;
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 4%;
+    padding: 10% 35% 5%;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+#title>p {
+    text-align: center;
+    font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+    font-size: 18px;
+    font-weight: 550;
+    font-style: normal;
+    color: #1E1E1E;
+    line-height: 1.4em;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 10px 0;
+}
+#subtitle>p {
+    font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color: #1E1E1E;
+    line-height: 1.35em;
+    letter-spacing: 0em;
+    text-align: center;
+}
+#guest-form {
+    width: 100%;
+}
+#guest-form>div {
+    margin: 8% 0 4% 0;
+}
+.wrapper .input-data {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.wrapper .input-data input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+.input-data input:focus~label,
+.input-data input:valid~label {
+    transform: translateY(-20px);
+    font-size: 15px;
+}
+.wrapper .input-data label {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: #1E1E1E;
+    transition: all 0.3s ease;
+}
+.wrapper .input-data .underline {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+}
+.input-data .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.input-data input:focus~.underline:before,
+.input-data input:valid~.underline:before {
+    transform: scaleX(1);
+}
+#guest-btn>button {
+    width: 100%;
+    border: 1px solid #1E1E1E;
+    outline: none;
+    background: white;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 4% 0 5% 0;
+    color: #1E1E1E;
+}
+#guest-btn>button:hover{
+    background: #000;
+    color:white;
+}
+#guest-desc {
+    background: #ffeacc;
+    text-align: center;
+    padding: 5px 15px;
+}
+#guest-desc > p {
+    font-size: 14px;
+    font-weight: 250;
+    font-style: normal;
+    color:grey ;
+    line-height: 1.35em;
+    letter-spacing: 0em;
+}

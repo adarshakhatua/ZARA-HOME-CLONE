@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 9px;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(26, 26, 26);
+  /* border-radius: 10px; */
+  border: 2px solid white;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(26, 26, 26);
+}
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+  /* margin-top:-10%; */
+  /* border:5px solid black; */
+  margin-bottom: 50px;
+}
+
+i {
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 22px;
+  margin-right: 3px;
+  font-weight: 600;
+}
+
+#footer_2nd {
+  display: flex;
+  text-align: center;
+  margin-top: 1%;
+  justify-content: center;
+}
+
+#footer_2nd > div {
+  margin: 20px;
+}
+
+#footer_3rd {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 3%;
+  width: 60%;
+}
+
+#footer_3rd > div {
+  margin: 10px;
+}
+
+#footer_3rd > div p {
+  font-size: 13px;
+  font-weight: 200;
+  margin: 5px;
+  /* border:1px solid red; */
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.icon {
+  justify-content: center;
+}
+#footer_1st input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  /* margin-top:-20px; */
+  width: 100%;
+}
+#footer_1st {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+}
+#footer_1st > p {
+  font-size: 13px;
+  font-weight: 100;
+}
+@media only screen and (min-width: 415px) and (max-width: 617px) {
+  #footer {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -70%;
+    /* border: 4px solid blue; */
+  }
+}
+@media only screen and (min-width: 618px) and (max-width: 768px) {
+  #footer {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 130%; */
+    margin: auto;
+    /* border: 4px solid blue; */
+    /* margin-top: -100%; */
+  }
+}
+@media only screen and (min-width: 618px) and (max-width: 1024px) {
+  #footer {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    border: 5px solid transparent;
+  }
+}
