@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/footer.css" />
+    <link rel="stylesheet" href="../style/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script
+      src="https://kit.fontawesome.com/e69451082d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      #kids {
+        border: 1px solid transparent;
+        height: 100px;
+        color: black;
+        width: 100%;
+        position: fixed;
+      }
+      #container {
+        margin-top: 40%;
+        width: 100%;
+        padding: 7% 2% 5%;
+        margin: auto;
+        text-align: center;
+
+        /* border: 1px solid red; */
+      }
+      body {
+        font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+        color: #515151;
+        font-size: 80%;
+        word-spacing: 2px;
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: repeat(3, 32%);
+        /* grid-template-rows:repeat(1, 250px); */
+        grid-gap: 2%;
+        /* grid-column-gap: 5%; */
+        margin-bottom: 3%;
+        border-bottom: 1px solid rgb(224, 224, 224);
+      }
+      button {
+        background-color: transparent;
+        color: transparent;
+        width: 100%;
+        text-align: center;
+        padding: 13px;
+        cursor: pointer;
+        border: 1px solid transparent;
+      }
+      button:hover {
+        background-color: black;
+        color: white;
+        border: transparent;
+      }
+      image {
+        width: 100%;
+      }
+
+      #buttondiv {
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      @media only screen and (min-width: 415px) and (max-width: 617px) {
+        #kids {
+          flex-direction: row;
+          height: 420px;
+        }
+        #container {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(19, 310px);
+          grid-gap: 10px;
+        }
+      }
+
+      @media only screen and (min-width: 618px) and (max-width: 768px) {
+        #Kids {
+          flex-direction: column;
+          height: 420px;
+        }
+        #container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 500px);
+          grid-gap: 20px;
+          margin-top: 10px;
+          margin-bottom: 15%;
+          /* border:4px solid red; */
+        }
+      }
+      @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        #kids {
+          flex-direction: column;
+          height: 420px;
+        }
+        #container {
+          /* width:970px; */
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(11, 380px);
+          grid-gap: 20px;
+          margin-top: 10px;
+          margin-bottom: -35%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="kids"></div>
+    <div id="container"></div>
+    <div id="footer"></div>
+  </body>
+</html>
+<script type="module">
+  import { navbar, footer } from "../component/navbar.js";
+  // Home\components\navbar.js
+  console.log(navbar);
+  let nav_div = document.getElementById("kids");
+  nav_div.innerHTML = navbar();
+
+  let footer_div = document.getElementById("footer");
+  footer_div.innerHTML = footer();
+
+  var data = [
+    {
+      imgUrl:
+        "https://static.zarahome.net/8/photos4/2021/I/4/1/p/1622/091/926/1622091926_2_7_5.jpg?t=1629385572390",
+      name: "MERMAID PILLOWCASE",
+      price: "9.99 €",
+    },
+    {
+      imgUrl:
+        "https://static.zarahome.net/8/photos4/2021/I/4/1/p/1610/091/802/1610091802_7_1_3.jpg?t=1629316650158",
+      name: "ELEPHANTS ON THE BEACH PILLOWCASE",
+      price: "9.99 € ",
+    },
+    {
+      imgUrl:
+        "https://static.zarahome.net/8/photos4/2022/V/4/1/p/5600/091/250/5600091250_2_7_5.jpg?t=1580204180489",
+      name: "COTTON PERCALE PILLOWCASE",
+      price: "2.99 € ",
+    },
+  ];
+
+  data.map(function (elem) {
+    var bed_card = document.createElement("div");
+    var bed_card_div = document.createElement("div");
+    var card = document.createElement("div");
+    bed_card_div.style.backgroundImage = `url(${elem.imgUrl})`;
+    bed_card_div.id = "buttondiv";
+    // var image = document.createElement("img");
+    // image.setAttribute("src", elem.imgUrl);
+
+    var button = document.createElement("button");
+    button.textContent = "Add to Basket";
+
+    var item_name = document.createElement("p");
+    item_name.textContent = elem.name;
+
+    var price = document.createElement("p");
+    price.innerHTML = elem.price;
+
+    bed_card.append(item_name, price);
+    bed_card_div.append(button, bed_card);
+    card.append(bed_card_div, bed_card);
+    document.querySelector("#container").append(card);
+  });
+</script>

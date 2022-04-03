@@ -1,0 +1,251 @@
+* {
+  font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+body {
+  /* border: 5px solid black; */
+  height: 1700px;
+}
+#header-div {
+  /* border: 10px solid red; */
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#sidebar-div {
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 5px solid black; */
+}
+#home {
+  width: 100%;
+  /* border: 1px solid red; */
+  font-size: 145%;
+  letter-spacing: 5px;
+  word-spacing: 2px;
+  display: flex;
+  /* display: none; */
+  justify-content: space-between;
+  align-items: center;
+}
+#home i {
+  font-size: 140%;
+}
+#sidebar {
+  height: 1500px;
+  width: 18%;
+  padding-top: 30px;
+  padding-left: 20px;
+  position: absolute;
+  top: 0px;
+  left: -345px;
+  z-index: 1;
+  /* display: none;   */
+  /* border: 1px solid red; */
+  background-color: rgb(255, 255, 255);
+}
+#sidebar div {
+  text-align: left;
+  margin: 8px;
+  margin-bottom: 12px;
+}
+#sidebar div:first-child {
+  font-size: 145%;
+  letter-spacing: 13px;
+  word-spacing: 2px;
+  margin-bottom: 60px;
+}
+#sidebar-div:hover #sidebar {
+  left: 0px;
+}
+
+#sidebar-div:hover #home > p {
+  display: none;
+  transition-delay: 0.3s;
+}
+#sidebar {
+  transition: left 0.3s;
+  transition-timing-function: ease-in-out;
+}
+#sidebar-div:hover #sidebar {
+  left: 0px;
+}
+.option1 {
+  /* border: 1px solid black; */
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.option1 > p:hover {
+  color: rgb(93, 93, 93);
+}
+.option1:hover .option2 {
+  color: black;
+}
+.option2 {
+  /* border: 1px solid teal; */
+  display: none;
+  padding-left: 16px;
+  font-size: 90%;
+  font-weight: 100;
+  color: rgb(78, 78, 78);
+}
+.option2 p {
+  /* border: 1px solid teal; */
+  margin: 8px 0px;
+}
+.option2 > p:hover {
+  color: rgb(93, 93, 93);
+}
+.option2 > p:hover .option1 {
+  color: black;
+}
+#search {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+}
+#search:hover {
+  color: rgb(109, 109, 109);
+}
+#search div {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+  width: 150px;
+}
+#login-div {
+  /* width: 16%; */
+  height: 70%;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgb(41, 41, 41);
+  font-size: 110%;
+}
+
+#login {
+  width: 170px;
+  height: 70%;
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: center;
+  align-items: center;
+}
+#login:hover {
+  color: rgb(104, 104, 104);
+}
+#login p {
+  font-size: 70%;
+}
+
+
+#wishlist {
+  width: 120px;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 70%;
+  display: none;
+}
+#wishlist:hover {
+  color: rgb(104, 104, 104);
+}
+#basket {
+  width: 170px;
+  height: 80%;
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: center;
+  align-items: center;
+}
+#basket:hover {
+  color: rgb(104, 104, 104);
+}
+#basket p {
+  font-size: 70%;
+}
+#body {
+  /* border: 1px solid green; */
+  height: 700px;
+}
+@media only screen and (min-width: 415px) and (max-width: 617px) {
+  #LOGIN,
+  #BASKET,
+  #search {
+    display: none;
+  }
+  #login-div {
+    width: 10%;
+    margin-right: 8%;
+    /* border:3px solid violet; */
+  }
+
+  #boody > img {
+    height: 100%;
+    /* border: 5px solid violet; */
+    object-fit: cover;
+  }
+  #sidebar-div {
+    width: 75%;
+  }
+  #boody {
+    margin-bottom: 200px;
+  }
+}
+
+@media only screen and (min-width: 618px) and (max-width: 768px) {
+  #LOGIN,
+  #BASKET,
+  #search {
+    display: none;
+  }
+  #login-div {
+    width: 10%;
+  }
+  #sidebar-div {
+    width: 60%;
+    /* border:4px solid green; */
+  }
+  #boody > img {
+    height: 65%;
+    /* border: 5px solid violet; */
+    object-fit: scale-down;
+  }
+  #boody {
+    margin-bottom: -470px;
+  }
+  #sidebar {
+    width: 35%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #LOGIN,
+  #BASKET,
+  #search {
+    display: none;
+  }
+  #login-div {
+    width: 10%;
+  }
+  #sidebar-div {
+    width: 70%;
+  }
+    #sidebar {
+    width: 35%;
+  }
+}

@@ -1,0 +1,107 @@
+#livecon{
+   border:1px solid transparent;
+  height:100px;
+  color:black;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+#livecontainer {
+    width: 96%;
+    margin: auto;
+    text-align: center;
+  margin-top: 0%;
+  margin-bottom: 20%;
+  padding-top: 140px;
+  /* border:4px solid red; */
+  }
+  body{
+    font-family: ZH-Sans,Arial,'Lucida Sans Unicode',sans-serif;
+    color: #515151;
+    font-size: 80%;
+    word-spacing: 2px;
+  }
+  body::-webkit-scrollbar {
+    width: 9px;
+  }  
+  body::-webkit-scrollbar-thumb {
+      background: rgb(26, 26, 26); 
+      /* border-radius: 10px; */
+      border: 2px solid white;
+    }
+  body::-webkit-scrollbar-thumb:hover {
+      background: rgb(26, 26, 26);
+    }
+  #livecontainer{
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    grid-template-rows:repeat(3, 450px);
+    grid-gap: 2%;
+    /* grid-column-gap: 5%; */
+   
+  }
+  button{
+    background-color: transparent;
+    color: transparent;
+    width: 100%;
+    text-align: center;
+    padding: 13px;
+    cursor: pointer;
+  border: 1px solid transparent;
+  }
+  button:hover{
+    background-color: black;
+    color: white;
+    border: transparent;
+  }
+  image{
+    width: 100%;
+  }
+  
+  #buttondiv{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* border:3px solid red; */
+  }
+  
+  
+  @media only screen and (min-width: 415px) and (max-width: 617px) {
+ #livecontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+     grid-template-rows:repeat(4, 250px);
+  margin-bottom: 150px;
+  }
+ #buttondiv{
+    height: 200px;
+    
+  }
+}
+
+@media only screen and (min-width: 618px) and (max-width: 768px) {
+ #livecontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+     grid-template-rows:repeat(3, 350px);
+  }
+    #buttondiv {
+  height: 300px;
+  margin: 5px;
+
+}
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+ #livecontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+     grid-template-rows:repeat(3, 450px);
+
+  }
+    #buttondiv {
+  height: 400px;
+  margin: 5px;
+
+}
+}
