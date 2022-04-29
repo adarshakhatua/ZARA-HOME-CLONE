@@ -68,7 +68,12 @@ Here user can see all varities of product. User can add products in cart, there 
 ![Screenshot (46)](https://user-images.githubusercontent.com/96000964/165294761-c17238cb-4e6d-4324-ab2d-8d6f0ca9418f.png)
 ##
 
+### Authors
+- Adarsha Khatua
+Github: -  <a target="_blank" href="https://github.com/adarshakhatua"> @adarshakhatua</a> 
+- Rutuja Patil
+Github: - <a target="_blank" href="https://github.com/rutuja3562" >@rutuja3562</a> 
 
-
-
+#
+##### Gitgub : <a target="_blank" href="https://github.com/adarshakhatua/ZARA-HOME-CLONE" >https://github.com/adarshakhatua/ZARA-HOME-CLONE</a> 
 
