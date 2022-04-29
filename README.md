@@ -19,6 +19,7 @@ In this project I have cloned the Nordstrome Rack website and given some of the 
 - Client: CSS | HTML
 - Server: Javascript | Express | Mongoose
 - Database: MongoDB Atlas
+- AWS
 
 ### Screenshots
 #
