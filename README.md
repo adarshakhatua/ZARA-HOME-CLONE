@@ -3,7 +3,7 @@
 ### What is Zara Home?
 #
 Zara Home is a company that belongs to the Spanish Inditex group dedicated to the manufacturing of home textiles.
-In this project I have cloned the Nordstrome Rack website and given some of the functionality as it is present in the original website.
+In this project we cloned the Zara Home website and given some of the functionality as it is present in the original website.
 #
 
 ### Features & Pages
